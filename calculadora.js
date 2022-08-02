@@ -36,8 +36,13 @@ function resta() {
             acumulado = acumulado + parseFloat(previo);
             display.value = acumulado;
         }else{
+            if (acumulado==0) {
+                acumulado = parseFloat(previo);
+                display.value = acumulado;
+            }else{
             acumulado = acumulado - parseFloat(previo);
             display.value = acumulado;
+            }
         }
         previo = "";
         sumar = false;
